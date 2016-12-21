@@ -13,7 +13,7 @@ class isMerged {
         $jira = @file_get_contents("$jiraserver/$sak/$sak.xml");
 
         if (strpos($jira,"<html")!==FALSE) {
-            $xml = new SimpleXMLElement("<channel><item><resolution>Security Issue</resolution></item></channel>");
+            $xml = new SimpleXMLElement("<xml><channel><item><resolution>Security Issue</resolution></item></channel></xml>");
         }
         else if($jira) {
             $xml = new SimpleXMLElement($jira);
